@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- assing our angular module -->
+<html ng-app="fjpeContactsApp" lang="en">
+<head>
+	<title>Mavrix Address Book App</title>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jasmine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/boot.min.js"></script>
+
+    <!-- Bootstrap css -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="css/style.css" rel="stylesheet"/>
+    <!-- js imports: jquery, bootstrap, angular and js files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script><!-- load angular -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-cookies.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-mocks.js"></script>
+    <script src="js/controller/controllers.js"></script>
+    <script src="js/routes/routes.js"></script>
+    <script src="js/core.js"></script>
+
+
+</head>
+<!-- set the controller -->
+<body ng-controller="contactCtrl">
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+	<!-- this is where content will be injected -->
+    <div ng-view></div>
+</body>
+</html>

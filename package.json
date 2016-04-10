@@ -1,0 +1,22 @@
+{
+  "name": "node-mavrix-fjpe",
+  "version": "1.0.0",
+  "description": "SPA Mavrix FJPE",
+  "main": "src/server.js",
+  "author": "JaviPerez",
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "country-list": "~0.0.3",
+    "express": "^4.8.0",
+    "request": "^2.70.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  }
+}

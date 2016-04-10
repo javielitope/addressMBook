@@ -1,0 +1,56 @@
+	<!-- Navbar -->
+    <header>
+      	<nav class="navbar navbar-default">
+            <div class="container">
+                <div class="nav navbar-nav navbar-left">
+                    <img src="../images/agenda.png" height="42" width="42" style="margin: 0px 20px">
+                </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/"> Address Book (Add, Edit & Delete)</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/"><i class="fa fa-home"></i>Contact List</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+	<div id="main" class="container">	
+		<form name="myForm">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+					<div class="panel-heading">
+						Form
+					</div>
+					<div class="panel-body">
+						<div class="form-group form-inline">
+							<label for="firstname">First Name:</label>
+							<input type="text" name="firstname" id="firstname" ng-model="editedContact.firstname" required size="30" maxlength="30" class="form-control" placeholder="Enter FirstName"/>
+							<span class="error" ng-show="myForm.firstname.$touched && myForm.firstname.$error.required">Required!</span>
+						</div>
+						<div class="form-group form-inline">
+							<label for="lastname">Last Name:</label>
+							<input type="text" name="lastname" id="lastname" ng-model="editedContact.lastname" required size="25" maxlength="25" class="form-control" placeholder="Enter LastName"/>
+							<span class="error" ng-show="myForm.lastname.$touched && myForm.lastname.$error.required">Required!</span>
+						</div>
+						<div class="form-group form-inline">
+							<label for="email">Email:</label>
+							<input type="text" name="email" id="email" ng-model="editedContact.email" 
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required size="30" maxlength="50" class="form-control" placeholder="Enter Email"/>
+							<span class="error" ng-show="myForm.email.$touched && myForm.email.$error.required">Required!</span>
+							<span class="error" ng-show="myForm.email.$touched && myForm.email.$error.pattern">Not valid email!</span>
+						</div>
+						<div class="form-group form-inline">
+							<label for="country">Country:</label>
+							<select name="country" ng-model="editedContact.country" ng-options="x for x in countries" required></select>
+							<span class="error" ng-show="myForm.country.$touched && myForm.country.$error.required">Required!</span>
+						</div>
+						<button ng-hide="adding || (myForm.firstname.$error.required || myForm.lastname.$error.required || myForm.email.$error.required || myForm.email.$error.pattern || myForm.country.$error.required)" 
+								ng-click="save(editedContact)" class="btn btn-success" data-toggle="tooltip"  title="Save"><span class="glyphicon glyphicon-ok"></button>
+						<button ng-show="adding && !myForm.firstname.$error.required && !myForm.lastname.$error.required && !myForm.email.$error.required && !myForm.email.$error.pattern && !myForm.country.$error.required" ng-click="addNew(editedContact)" class="btn btn-success" data-toggle="tooltip"  title="Save"><span class="glyphicon glyphicon-ok"></button>
+						<button ng-click="cancel()" class="btn btn-danger" data-toggle="tooltip"  title="Cancel"><span class="glyphicon glyphicon-remove"></button>
+					</div>
+				</div>
+			</div>	
+		</form>
+	</div>

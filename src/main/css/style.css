@@ -1,0 +1,5 @@
+	/* Give red color to error messages */
+	.error {color: #900;}
+	/* Hide jasmine report */
+	.jasmine_html-reporter{visibility: hidden;}
+
